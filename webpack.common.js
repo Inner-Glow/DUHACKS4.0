@@ -2,8 +2,17 @@ const path = require("path");
 const fs = require("fs");
 const { VueLoaderPlugin } = require("vue-loader");
 var k,jj;
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
+const webpack = require("webpack");
 module.exports = {
-  devtool: "inline-source-map",
+  devtool:false,
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
+},
   entry:
     (
       (k = (function (dir) {
@@ -91,7 +100,55 @@ module.exports = {
       vue: "vue/dist/vue.esm-bundler.js",
     },
   },
-  plugins: [new VueLoaderPlugin()],
+  optimization: {
+    minimize: true,
+        minimizer: [
+            new TerserPlugin(),
+        ],
+  },
+          plugins:  [
+            new VueLoaderPlugin(),
+            new webpack.DefinePlugin({
+              'process.env.NODE_ENV': JSON.stringify('production'),
+            }),
+            new MiniCssExtractPlugin({
+              filename: "bundle.css",
+            }),
+            new webpack.optimize.AggressiveMergingPlugin(),
+            new TerserPlugin({
+              terserOptions: {
+                mangle: true,
+                compress: {
+                  warnings: false,
+                  pure_getters: true,
+                  unsafe: true,
+                  unsafe_comps: true,
+                  conditionals: true,
+                  unused: true,
+                  comparisons: true,
+                  sequences: true,
+                  dead_code: true,
+                  evaluate: true,
+                  if_return: true,
+                  join_vars: true,
+                },
+                output: {
+                  comments: false,
+                },
+              },
+              extractComments: false,
+            }),
+            new webpack.IgnorePlugin({ resourceRegExp: /^\.\/locale$/, contextRegExp: /moment$/ }),
+            new CompressionPlugin({
+              filename: "[path][base].gz",
+              algorithm: "gzip",
+              test: /\.(js|css|html)$/,
+              threshold: 10240,
+              minRatio: 0,
+            }),
+          ],
+
+  // plugins: [],
   //     plugins: [
   //       new webpack.DefinePlugin({
   //         'process.env.LOGINKEY': JSON.stringify({key: process.env.LOGINKEY}),
