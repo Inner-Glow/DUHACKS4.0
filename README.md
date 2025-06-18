@@ -59,7 +59,7 @@ However, due to financial constraints, we were unable to integrate a traditional
 
 - Reduced Manual Work – Organizers can automate registrations, making event management more efficient.
 
-- Better Security & Verification – The QR code-based entry system prevents unauthorized access, ensuring a smoother and safer event experience.
+- Better Security & Verification – The QR code  based entry system prevents unauthorized access, ensuring a smoother and safer event experience.
 
 This platform simplifies event participation for students while making event organization more structured and secure! 🚀
 
