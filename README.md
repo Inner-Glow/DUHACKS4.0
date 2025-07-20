@@ -43,12 +43,14 @@ Our goal was to make event participation simple, secure, and accessible for ever
 <img  src='https://raw.githubusercontent.com//aka-shinu/DUHACKS4.0/master/assets/image-8.png'>&nbsp;&nbsp;&nbsp;&nbsp;
 <img  src='https://raw.githubusercontent.com//aka-shinu/DUHACKS4.0/master/assets/image-9.png'>&nbsp;&nbsp;&nbsp;&nbsp;
 
-#Why We Built This
+💡 WHY WE BUILT THIS
+
 Students often miss exciting campus events because information is scattered across WhatsApp groups, posters, and word of mouth. Organizers, on the other hand, struggle with manual registrations and security at entry points.
 This platform solves both problems by creating a centralized, digital solution for students and organizers alike.
 
 
- Key Features
+🚀 FEATURES THAT MAKE IT AWESOME
+
 1. Easy Event Discovery
 No more endless scrolling through chat groups! Find all college events in one single, organized platform.
 
@@ -68,7 +70,7 @@ Event organizers can automate registrations & verification, saving hours of effo
 The QR code-based entry system ensures only registered participants get access, preventing unauthorized entries.
 
 
-🛠️ How We Built It
+🛠️ HOW WE BUILT IT
 
 Frontend: Designed with a modern, responsive UI for an intuitive user experience.
 
@@ -78,13 +80,13 @@ Storage: Due to budget constraints, instead of a traditional database, we clever
 
 Performance: Despite using multiple technologies, we optimized components to ensure smooth performance without compromising speed.
 
-🌟 What Makes It Special?
+🌟 WHAT MAKES IT SPECIAL?
 
 Budget-Friendly Yet Powerful – Built entirely from scratch without expensive infrastructure.
 Tech-First Approach – Even with limited resources, we implemented authentication, QR verification, and event management seamlessly.
 Made for Students, by Students – Designed with the real college experience in mind.
 
-🎯 The Impact
+🎯 IMPACT
 
 ✔ Students can easily find, register, and attend events without hassle.
 ✔ Organizers save time with automated processes.
